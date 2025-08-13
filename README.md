@@ -69,7 +69,7 @@ public class MyPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        configFile = new ConfigAPI<>(plugin, ConfigKeys.class, "config.yml");
+        configFile = new ConfigAPI<>(plugin, ConfigEnum.class, "config.yml");
     }
 
     public ConfigAPI<ConfigEnum> getConfigFile() {
