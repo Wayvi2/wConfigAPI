@@ -90,5 +90,9 @@ plugin.getConfigAPI().set(ConfigKeys.MAX_PLAYERS, 150);
 
 ```java
 plugin.getConfigAPI().reload();
+```
+## 5️⃣ Don't forget to create your config file
 
+Make sure to create the configuration file in your plugin's `resources` folder with the correct name and path.  
+For example, if you use `"config.yml"` in your `ConfigAPI` constructor, it should be located at: `src/main/resources/config.yml`
 
