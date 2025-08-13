@@ -1,0 +1,4 @@
+name: wConfigAPI
+version: '${version}'
+main: com.wayvi.wconfigapi.wconfigapi.ConfigAPI
+api-version: '1.21'
