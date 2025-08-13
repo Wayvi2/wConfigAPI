@@ -31,3 +31,31 @@ dependencies {
         <version>1.0.0</version>
     </dependency>
 </dependencies>
+
+## 📖 Usage
+
+### 1️⃣ Create your config keys enum
+```java
+public enum ConfigKeys implements ConfigKey<?> {
+    PREFIX("prefix", "&7[&aTestPlugin&7]"),
+    MAX_PLAYERS("max-players", 100),
+    MOTD("motd", "Welcome to the server!");
+
+    private final String path;
+    private final Object defaultValue;
+
+    ConfigKeys(String path, Object defaultValue) {
+        this.path = path;
+        this.defaultValue = defaultValue;
+    }
+
+    @Override
+    public String getPath() {
+        return path;
+    }
+
+    @Override
+    public Object getDefaultValue() {
+        return defaultValue;
+    }
+}
