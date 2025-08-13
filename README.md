@@ -36,7 +36,7 @@ dependencies {
 
 ### 1️⃣ Create your config keys enum
 ```java
-public enum ConfigEnum implements ConfigKey<?> {
+public enum ConfigEnum implements ConfigKey<Object> {
     PREFIX("prefix", "&7[&aTestPlugin&7]"),
     MAX_PLAYERS("max-players", 100),
     MOTD("motd", "Welcome to the server!");
