@@ -85,4 +85,10 @@ String prefix = plugin.getConfigAPI().get(ConfigKeys.PREFIX);
 
 // Set a value
 plugin.getConfigAPI().set(ConfigKeys.MAX_PLAYERS, 150);
+```
+## 4️⃣ Reload the configuration
+
+```java
+plugin.getConfigAPI().reload();
+
 
