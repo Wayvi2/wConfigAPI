@@ -14,3 +14,20 @@ repositories {
 dependencies {
     implementation 'com.github.Wayvi2:wConfigAPI:1.0.0'
 }
+
+### Maven
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.github.Wayvi2</groupId>
+        <artifactId>wConfigAPI</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+</dependencies>
