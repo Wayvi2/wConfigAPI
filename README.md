@@ -81,10 +81,10 @@ public class MyPlugin extends JavaPlugin {
 
 ```java
 // Get a value
-String prefix = plugin.getConfigAPI().get(ConfigKeys.PREFIX);
+String prefix = plugin.getConfigFile().get(ConfigKeys.PREFIX);
 
 // Set a value
-plugin.getConfigAPI().set(ConfigKeys.MAX_PLAYERS, 150);
+plugin.getConfigFile().set(ConfigKeys.MAX_PLAYERS, 150);
 ```
 ## 4️⃣ Reload the configuration
 
