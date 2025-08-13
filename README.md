@@ -31,7 +31,7 @@ dependencies {
         <version>1.0.0</version>
     </dependency>
 </dependencies>
-
+```
 ## 📖 Usage
 
 ### 1️⃣ Create your config keys enum
