@@ -72,7 +72,7 @@ public class MyPlugin extends JavaPlugin {
         configFile = new ConfigAPI<>(plugin, ConfigKeys.class, "config.yml");
     }
 
-    public ConfigAPI<configFile> getConfigFile() {
+    public ConfigAPI<ConfigEnum> getConfigFile() {
         return configFile;
     }
 }
