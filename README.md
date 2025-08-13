@@ -36,7 +36,7 @@ dependencies {
 
 ### 1️⃣ Create your config keys enum
 ```java
-public enum ConfigKeys implements ConfigKey<?> {
+public enum ConfigEnum implements ConfigKey<?> {
     PREFIX("prefix", "&7[&aTestPlugin&7]"),
     MAX_PLAYERS("max-players", 100),
     MOTD("motd", "Welcome to the server!");
@@ -59,3 +59,30 @@ public enum ConfigKeys implements ConfigKey<?> {
         return defaultValue;
     }
 }
+```
+## 2️⃣ Initialize ConfigAPI in your plugin
+
+```java
+public class MyPlugin extends JavaPlugin {
+
+    private ConfigAPI<ConfigEnum> configFile;
+
+    @Override
+    public void onEnable() {
+        configFile = new ConfigAPI<>(plugin, ConfigKeys.class, "config.yml");
+    }
+
+    public ConfigAPI<configFile> getConfigFile() {
+        return configFile;
+    }
+}
+```
+## 3️⃣ Get and set values
+
+```java
+// Get a value
+String prefix = plugin.getConfigAPI().get(ConfigKeys.PREFIX);
+
+// Set a value
+plugin.getConfigAPI().set(ConfigKeys.MAX_PLAYERS, 150);
+
