@@ -1,4 +1,8 @@
+
+
 # wConfigAPI
+
+[![](https://jitpack.io/v/Wayvi2/wConfigAPI.svg)](https://jitpack.io/#Wayvi2/wConfigAPI)
 
 wConfigAPI is a lightweight Java API for easily managing YAML configuration files in Spigot/Bukkit plugins, with automatic handling of missing keys via enums.
 
