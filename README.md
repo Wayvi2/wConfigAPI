@@ -14,7 +14,7 @@ repositories {
 dependencies {
     implementation 'com.github.Wayvi2:wConfigAPI:1.0.0'
 }
-
+```
 ### Maven
 ```xml
 <repositories>
