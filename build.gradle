@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.wayvi'
+group = 'com.github.Wayvi2'
 version = '1.0.0'
 
 repositories {
@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-compileOnly "org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT"
+    compileOnly "org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT"
 }
 
 def targetJavaVersion = 8
@@ -34,7 +34,6 @@ java {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
-
     if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
         options.release.set(targetJavaVersion)
     }
