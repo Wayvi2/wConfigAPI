@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.Wayvi2:wConfigAPI:1.0.0'
+    implementation 'com.github.Wayvi2:wConfigAPI:1.0.1'
 }
 ```
 ### Maven
