@@ -39,10 +39,39 @@ public class ConfigAPI<E extends Enum<E> & ConfigKey<?>> {
         if (changed) save();
     }
 
+    @SuppressWarnings("unchecked")
     public <T> T get(E key) {
-        Object value = config.get(key.getPath(), key.getDefaultValue());
-        return (T) value;
+        Object defaultValue = key.getDefaultValue();
+
+        if (defaultValue instanceof Boolean) {
+            return (T) Boolean.valueOf(config.getBoolean(key.getPath(), (Boolean) defaultValue));
+        } else if (defaultValue instanceof Byte) {
+            return (T) Byte.valueOf((byte) config.getInt(key.getPath(), ((Byte) defaultValue).intValue()));
+        } else if (defaultValue instanceof Short) {
+            return (T) Short.valueOf((short) config.getInt(key.getPath(), ((Short) defaultValue).intValue()));
+        } else if (defaultValue instanceof Integer) {
+            return (T) Integer.valueOf(config.getInt(key.getPath(), (Integer) defaultValue));
+        } else if (defaultValue instanceof Long) {
+            return (T) Long.valueOf(config.getLong(key.getPath(), (Long) defaultValue));
+        } else if (defaultValue instanceof Float) {
+            return (T) Float.valueOf((float) config.getDouble(key.getPath(), ((Float) defaultValue).doubleValue()));
+        } else if (defaultValue instanceof Double) {
+            return (T) Double.valueOf(config.getDouble(key.getPath(), (Double) defaultValue));
+        } else if (defaultValue instanceof Character) {
+            String str = config.getString(key.getPath(), String.valueOf(defaultValue));
+            return (T) Character.valueOf(str.length() > 0 ? str.charAt(0) : (Character) defaultValue);
+        } else if (defaultValue instanceof String) {
+            return (T) config.getString(key.getPath(), (String) defaultValue);
+        } else if (defaultValue instanceof java.util.List) {
+            return (T) config.getList(key.getPath(), (java.util.List<?>) defaultValue);
+        } else if (defaultValue instanceof java.util.Map) {
+            return (T) config.getConfigurationSection(key.getPath()).getValues(true);
+        } else {
+            return (T) config.get(key.getPath(), defaultValue);
+        }
     }
+
+
 
     public <T> void set(E key, T value) {
         config.set(key.getPath(), value);
