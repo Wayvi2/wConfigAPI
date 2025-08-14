@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.github.Wayvi2'
+group = 'com.wayvi'
 version = '1.0.0'
 
 repositories {
