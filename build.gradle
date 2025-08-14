@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.wayvi.wconfigapi.WConfigAPI'
+group = 'com.wayvi'
 version = '1.0.0'
 
 repositories {
