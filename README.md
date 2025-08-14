@@ -32,7 +32,7 @@ dependencies {
     <dependency>
         <groupId>com.github.Wayvi2</groupId>
         <artifactId>wConfigAPI</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </dependency>
 </dependencies>
 ```
