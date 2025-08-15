@@ -93,7 +93,7 @@ plugin.getConfigFile().set(ConfigKeys.MAX_PLAYERS, 150);
 ## 4️⃣ Reload the configuration
 
 ```java
-plugin.getConfigAPI().reload();
+plugin.getConfigFile().reload();
 ```
 ## 5️⃣ Don't forget to create your config file
 
