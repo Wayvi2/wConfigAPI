@@ -85,7 +85,7 @@ public class MyPlugin extends JavaPlugin {
 
 ```java
 // Get a value
-String prefix = plugin.getConfigFile().get(ConfigEnum.MAX_PLAYRRS);
+String prefix = plugin.getConfigFile().get(ConfigEnum.MAX_PLAYERS);
 
 // Set a value
 plugin.getConfigFile().set(ConfigEnum.MAX_PLAYERS, 150);
