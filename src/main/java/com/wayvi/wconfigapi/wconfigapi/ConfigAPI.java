@@ -10,7 +10,7 @@ import java.io.IOException;
 public class ConfigAPI<E extends Enum<E> & ConfigKey<?>> {
 
     private final File file;
-    private final FileConfiguration config;
+    private FileConfiguration config;
     private final Class<E> enumClass;
 
     public ConfigAPI(Plugin plugin, Class<E> enumClass, String fileName) {
@@ -87,14 +87,8 @@ public class ConfigAPI<E extends Enum<E> & ConfigKey<?>> {
     }
 
     public void reload() {
-        FileConfiguration newConfig = YamlConfiguration.loadConfiguration(file);
 
-        config.setDefaults(newConfig);
-
-        for (String key : newConfig.getKeys(true)) {
-            config.set(key, newConfig.get(key));
-        }
-
+        this.config = YamlConfiguration.loadConfiguration(file);
         checkAndAddMissing();
     }
 
